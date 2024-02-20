@@ -1,14 +1,19 @@
-import { Link } from "react-router-dom";
-import SearchForm3 from "../../common/job-search/SearchForm3";
+  import { Link } from "react-router-dom";
+  import SearchForm3 from "../../common/job-search/SearchForm3";
 
+  import { useNavigate } from "react-router-dom";
 
 const index = () => {
+  const navigate = useNavigate();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
   return (
     <section className="banner-section-eight">
       <div className="image-outer">
         <figure className="image">
           <img
-           
+
             src="/images/resource/banner-img-9.png"
             alt="banner image"
           />
@@ -19,16 +24,13 @@ const index = () => {
       <div className="auto-container">
         <div className="row">
           <div className="content-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
-            <div className="inner-column">
-              <div
-                className="title-box"
-                data-aso-delay="500"
-                data-aos="fade-up"
-              >
-                <h3>Find Candidate</h3>
+            <div className="inner-column wow fadeInUp" data-aos="fade-up">
+              <div className="title-box">
+
+                <h3>Identify the ideal candidate swiftly.</h3>
                 <div className="text">
-                  Jobs & Job search. Find jobs in global. Executive jobs & work.
-                  Employment
+                  Streamline Hiring: Find Your Perfect Fit Fast!
+
                 </div>
               </div>
               {/* End title box */}
@@ -38,26 +40,33 @@ const index = () => {
                 data-aos-delay="700"
                 data-aos="fade-up"
               >
-                <SearchForm3 btnStyle="btn-style-one" />
+                <form onClick={handleSubmit}>
+                  <div className="row">
+                    {/* <!-- Form Group --> */}
+                    <div className="form-group col-lg-12 col-md-12 col-sm-12">
+                      <span className="icon flaticon-phone"></span>
+                      <input
+                        type="tel"
+                        name="mobile_number"
+                        placeholder="Enter your mobile number"
+                      />
+                    </div>
+
+                    {/* <!-- Form Group --> */}
+                    <div className="form-group col-lg-12 col-md-12 col-sm-12 text-center">
+                      <button
+                        type="submit"
+                        className="theme-btn btn-style-one"
+                        onClick={() => navigate("/login")}
+                      >
+                        Login
+                      </button>
+                    </div>
+                  </div>
+                </form>
               </div>
               {/* <!-- Job Search Form --> */}
 
-              <div className="bottom-box wow fadeInUp" data-wow-delay="1500ms">
-                <div className="count-employers">
-                  <span className="title">10k+ Candidates</span>
-                  <img
-                   
-                    src="/images/resource/multi-peoples.png"
-                    alt="multi people"
-                  />
-                </div>
-                <Link
-                  to="/candidates-dashboard/cv-manager"
-                  className="upload-cv"
-                >
-                  <span className="icon flaticon-file"></span> Upload your CV
-                </Link>
-              </div>
               {/* End .bottom-box */}
             </div>
             {/* End inner-column */}

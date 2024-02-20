@@ -12,10 +12,11 @@ const Funfact3 = () => {
     {
       id: 1,
       startCount: "0",
-      endCount: "97216",
-      meta: "Jobs",
-      animationDelay: "700",
+      endCount: "5322",
+      meta: "Resume",
+      animationDelay: "900",
     },
+    
     {
       id: 2,
       startCount: "0",
@@ -26,10 +27,10 @@ const Funfact3 = () => {
     {
       id: 3,
       startCount: "0",
-      endCount: "5322",
-      meta: "Resume",
-      animationDelay: "900",
-    },
+      endCount: "97216",
+      meta: "Jobs",
+      animationDelay: "700",
+    },  
     {
       id: 4,
       startCount: "0",

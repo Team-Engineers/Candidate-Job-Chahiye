@@ -1,5 +1,8 @@
+import SearchForm2 from "@/components/footer/SearchForm2";
 import SearchForm3 from "../../common/job-search/SearchForm3";
 import Funfact3 from "../../fun-fact-counter/Funfact3";
+import SearchForm from "@/components/footer/SearchForm";
+import SearchForm5 from "@/components/common/job-search/SearchForm5";
 
 const index = () => {
   return (
@@ -10,10 +13,10 @@ const index = () => {
       <div className="auto-container">
         <div className="cotnent-box">
           <div className="title-box" data-wow-delay="300" data-aos="fade-up">
-            <h3>Join us & Explore Thousands of Jobs</h3>
+            <h3>Identify the ideal candidate swiftly.</h3>
             <div className="text">
-              Find Jobs, Employment & Career Opportunities
-            </div>
+              Streamline Hiring: Find Your Perfect Fit Fast!
+                        </div>
           </div>
           {/* End title-box */}
 
@@ -22,7 +25,7 @@ const index = () => {
             data-aos="fade-up"
             data-aos-delay="500"
           >
-            <SearchForm3 btnStyle="btn-style-two" />
+            <SearchForm5 btnStyle="btn-style-two" />
           </div>
           {/* <!-- Job Search Form --> */}
 

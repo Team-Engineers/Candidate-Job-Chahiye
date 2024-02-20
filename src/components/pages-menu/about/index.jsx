@@ -10,6 +10,7 @@ import CallToAction2 from "../../call-to-action/CallToAction2";
 import Testimonial2 from "../../testimonial/Testimonial2";
 import Block1 from "../../block/Block1";
 import Breadcrumb from "../../common/Breadcrumb";
+import Header from "@/components/home-4/Header";
 
 
 const index = () => {
@@ -21,7 +22,7 @@ const index = () => {
       <LoginPopup />
       {/* End Login Popup Modal */}
 
-      <DefaulHeader />
+      <Header/>
       {/* <!--End Main Header --> */}
 
       <MobileMenu />

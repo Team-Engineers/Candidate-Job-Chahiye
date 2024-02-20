@@ -14,17 +14,17 @@ const Register2 = () => {
       <Tabs>
         <div className="form-group register-dual">
           <TabList className="btn-box row">
-            <Tab className="col-lg-6 col-md-12">
+            {/* <Tab className="col-lg-6 col-md-12">
               <button className="theme-btn btn-style-four">
                 <i className="la la-user"></i> Candidate
               </button>
-            </Tab>
+            </Tab> */}
 
-            <Tab className="col-lg-6 col-md-12">
+            {/* <Tab className="col-lg-6 col-md-12">
               <button className="theme-btn btn-style-four">
                 <i className="la la-briefcase"></i> Employer
               </button>
-            </Tab>
+            </Tab> */}
           </TabList>
         </div>
         {/* End .form-group */}

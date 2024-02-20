@@ -3,12 +3,26 @@
 
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import HeaderNavContent from "../header/HeaderNavContent";
-
+import { useLocation } from "react-router-dom";
+import {
+  blogItems,
+  candidateItems,
+  employerItems,
+  findJobItems,
+  homeItems,
+  pageItems,
+  shopItems,
+} from "../../data/mainMenuData";
+import {
+  isActiveParent,
+  isActiveLink,
+  isActiveParentChaild,
+} from "../../utils/linkActiveChecker";
+import HeaderNavEmployee from "../header/HeaderNavEmployee";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
-
+  const { pathname } = useLocation();
   const changeBackground = () => {
     if (window.scrollY >= 10) {
       setNavbar(true);
@@ -45,27 +59,18 @@ const Header = () => {
           </div>
           {/* End .logo-box */}
 
-          <HeaderNavContent />
-          {/* <!-- Main Menu End--> */}
+         <HeaderNavEmployee/>         {/* <!-- Main Menu End--> */}
         </div>
         {/* End .nav-outer */}
 
         <div className="outer-box">
           {/* <!-- Login/Register --> */}
           <div className="btn-box">
-            <a
-              href="#"
-              className="theme-btn btn-style-four btn-outline-black call-modal"
-              data-bs-toggle="modal"
-              data-bs-target="#loginPopupModal"
-            >
-              Login / Register
-            </a>
             <Link
-              to="/employers-dashboard/post-jobs"
+              to="/"
               className="theme-btn btn-style-one"
             >
-              Job Post
+              Job Search?
             </Link>
           </div>
         </div>

@@ -5,6 +5,7 @@ import MobileMenu from "../../header/MobileMenu";
 import FilterJobsBox from "./FilterJobsBox";
 import JobSearchForm from "./JobSearchForm";
 import FilterSidebar from "./FilterSidebar";
+import Header from "@/components/home-4/Header";
 
 const index = () => {
   return (
@@ -15,7 +16,7 @@ const index = () => {
       <LoginPopup />
       {/* End Login Popup Modal */}
 
-      <DefaulHeader2 />
+      <Header />
       {/* End Header with upload cv btn */}
 
       <MobileMenu />

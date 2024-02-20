@@ -24,50 +24,52 @@ const Header = () => {
   return (
     // <!-- Main Header-->
     <header
-      className={`main-header header-style-two alternate  ${
+      className={`main-header header-style-three  ${
         navbar ? "fixed-header animated slideInDown" : ""
       }`}
     >
-      <div className="auto-container">
-        {/* <!-- Main box --> */}
-        <div className="main-box">
-          {/* <!--Nav Outer --> */}
-          <div className="nav-outer">
-            <div className="logo-box">
-              <div className="logo">
-                <Link to="/">
-                  <img
-                   
-                    src="/images/logo-2.svg"
-                    alt="brand"
-                  />
-                </Link>
-              </div>
-            </div>
-            {/* End .logo-box */}
-
-            <HeaderNavContent />
-            {/* <!-- Main Menu End--> */}
-          </div>
-          {/* End .nav-outer */}
-
-          <div className="outer-box">
-            <div className="d-flex align-items-center btn-box2">
-              <a
-                href="#"
-                className="theme-btn btn-style-six call-modal"
-                data-bs-toggle="modal"
-                data-bs-target="#loginPopupModal"
-              >
-                Login / Register
-              </a>
-              <Link
-                to="/employers-dashboard/post-jobs"
-                className="theme-btn btn-style-five"
-              >
-                Job Post
+      {/* <!-- Main box --> */}
+      <div className="main-box">
+        {/* <!--Nav Outer --> */}
+        <div className="nav-outer">
+          <div className="logo-box">
+            <div className="logo">
+              <Link to="/">
+                <img
+                 
+                  src="/images/logo.svg"
+                  alt="brand"
+                />
               </Link>
             </div>
+          </div>
+          {/* End .logo-box */}
+
+          <HeaderNavContent />
+          {/* <!-- Main Menu End--> */}
+        </div>
+        {/* End .nav-outer */}
+
+        <div className="outer-box">
+          {/* <!-- Add Listing --> */}
+          <Link to="/candidates-dashboard/cv-manager" className="upload-cv">
+            Upload your CV
+          </Link>
+          {/* <!-- Login/Register --> */}
+          <div className="btn-box">
+          <Link
+              to="/login"
+              className="theme-btn btn-style-three call-modal"
+            >
+             
+              Login / Register
+              </Link>
+            <Link
+              to="/employe"
+              className="theme-btn btn-style-seven"
+            >
+              Employe Login
+            </Link>
           </div>
         </div>
       </div>

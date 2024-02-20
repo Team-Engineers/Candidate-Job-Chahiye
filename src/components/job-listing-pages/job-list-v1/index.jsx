@@ -1,3 +1,4 @@
+import Header from "@/components/home-4/Header";
 import FooterDefault from "../../../components/footer/common-footer";
 import Breadcrumb from "../../common/Breadcrumb";
 import LoginPopup from "../../common/form/login/LoginPopup";
@@ -15,7 +16,7 @@ const index = () => {
             <LoginPopup />
             {/* End Login Popup Modal */}
 
-            <DefaulHeader2 />
+            <Header/>
             {/* End Header with upload cv btn */}
 
             <MobileMenu />

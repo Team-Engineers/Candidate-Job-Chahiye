@@ -56,10 +56,10 @@ const Header = () => {
             {/* <!-- Login/Register --> */}
             <div className="btn-box">
               <Link
-                to="/employers-dashboard/post-jobs"
+                to="/"
                 className="theme-btn btn-style-one"
               >
-                <span className="btn-title">Job Post</span>
+                <span className="btn-title">Home</span>
               </Link>
             </div>
           </div>

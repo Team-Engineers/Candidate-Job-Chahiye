@@ -8,6 +8,7 @@ import HeaderNavContent from "./HeaderNavContent";
 import { isActiveLink } from "../../utils/linkActiveChecker";
 
 import { useLocation } from "react-router-dom";
+import HeaderNavEmployee from "./HeaderNavEmployee";
 
 const DashboardHeader = () => {
     const { pathname } = useLocation();
@@ -52,7 +53,7 @@ const DashboardHeader = () => {
                         </div>
                         {/* End .logo-box */}
 
-                        <HeaderNavContent />
+                        <HeaderNavEmployee />
                         {/* <!-- Main Menu End--> */}
                     </div>
                     {/* End .nav-outer */}

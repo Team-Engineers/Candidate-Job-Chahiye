@@ -6,6 +6,7 @@ import MobileMenu from "../../header/MobileMenu";
 import BlogPagination from "../blog-sidebar/BlogPagination";
 import BlogSidebar from "../blog-sidebar";
 import Breadcrumb from "../../common/Breadcrumb";
+import Header from "@/components/home-4/Header";
 
 const index = () => {
   return (
@@ -16,7 +17,7 @@ const index = () => {
       <LoginPopup />
       {/* End Login Popup Modal */}
 
-      <DefaulHeader />
+      <Header />
       {/* <!--End Main Header --> */}
 
       <MobileMenu />

@@ -120,7 +120,9 @@ function App() {
             <BrowserRouter>
               <Routes>
                 <Route path="/">
-                  <Route index element={<Home />} />
+                  <Route index element={<HomePage4 />} />
+                  <Route path="employe" element={<HomePage15 />} />
+
                   <Route path="home-1" element={<HomePage1 />} />
                   <Route path="home-2" element={<HomePage2 />} />
                   <Route path="home-3" element={<HomePage3 />} />
@@ -140,8 +142,8 @@ function App() {
                   <Route path="home-17" element={<HomePage17 />} />
 
                   <Route path="job-list-v1" element={<JobListPage1 />} />
-                  <Route path="job-list-v2" element={<JobListPage2 />} />
-                  <Route path="job-list-v3" element={<JobListPage3 />} />
+                  <Route path="/jobs" element={<JobListPage2 />} />
+                  <Route path="job-list-v3" element={<JobListPage2 />} />
                   <Route path="job-list-v4" element={<JobListPage4 />} />
                   <Route path="job-list-v5" element={<JobListPage5 />} />
                   <Route path="job-list-v6" element={<JobListPage6 />} />
@@ -174,9 +176,9 @@ function App() {
                   <Route path="candidates-list-v4" element={<CandidateListPage4 />} />
                   <Route path="candidates-list-v5" element={<CandidateListPage5 />} />
 
-                  <Route path="candidates-single-v1/:id" element={<CandidateSingleDynamicV1 />} />
+                  <Route path="candidates-single-v1/:id" element={<CandidateSingleDynamicV3 />} />
                   <Route path="candidates-single-v2/:id" element={<CandidateSingleDynamicV2 />} />
-                  <Route path="candidates-single-v3/:id" element={<CandidateSingleDynamicV3 />} />
+                  <Route path="candidates-single-v3/:id" element={<CandidateSingleDynamicV1 />} />
 
                   <Route path="blog-list-v1" element={<BlogListpage1 />} />
                   <Route path="blog-list-v2" element={<BlogListpage2 />} />
@@ -184,6 +186,7 @@ function App() {
                   <Route path="blog-details/:id" element={<BlogDetailsDynamic />} />
 
                   <Route path="about" element={<AboutPage />} />
+                  
                   <Route path="pricing" element={<PricingPage />} />
                   <Route path="faq" element={<FaqPage />} />
                   <Route path="terms" element={<TermsPage />} />

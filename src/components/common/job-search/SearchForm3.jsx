@@ -16,7 +16,7 @@ const SearchForm3 = () => {
         {/* <!-- Form Group --> */}
         <div className="form-group col-lg-4 col-md-12 col-sm-12">
           <span className="icon flaticon-search-1"></span>
-          <input
+          <input  
             type="text"
             name="field_name"
             placeholder="Job title, keywords, or company"

@@ -13,6 +13,7 @@ import AboutVideo from "@/components/candidates-single-pages/shared-components/A
 import {useParams } from "react-router-dom";
 
 import MetaComponent from "@/components/common/MetaComponent";
+import Header from "@/components/home-15/Header";
 
 const metadata = {
   title:
@@ -34,7 +35,7 @@ const CandidateSingleDynamicV3 = () => {
       <LoginPopup />
       {/* End Login Popup Modal */}
 
-      <DefaulHeader />
+      <Header />
       {/* <!--End Main Header --> */}
 
       <MobileMenu />

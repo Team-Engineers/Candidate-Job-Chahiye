@@ -4,6 +4,7 @@ import DefaulHeader2 from "../../header/DefaulHeader2";
 import MobileMenu from "../../header/MobileMenu";
 import FilterTopBox from "./FilterTopBox";
 import JobSearchForm from "./JobSearchForm";
+import Header from "@/components/home-15/Header";
 
 const Index = () => {
   return (
@@ -14,9 +15,9 @@ const Index = () => {
       <LoginPopup />
       {/* End Login Popup Modal */}
 
-      <DefaulHeader2 />
-      {/* End Header with upload cv btn */}
 
+      {/* End Header with upload cv btn */}
+      <Header />
       <MobileMenu />
       {/* End MobileMenu */}
 

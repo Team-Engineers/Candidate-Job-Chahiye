@@ -15,6 +15,7 @@ import ApplyJobModalContent from "@/components/job-single-pages/shared-component
 import {useParams } from "react-router-dom";
 
 import MetaComponent from "@/components/common/MetaComponent";
+import Header from "@/components/home-4/Header";
 
 const metadata = {
   title: "Job Single Dyanmic V1 || Superio - Job Borad ReactJs Template",
@@ -35,7 +36,7 @@ const JobSingleDynamicV1 = () => {
       <LoginPopup />
       {/* End Login Popup Modal */}
 
-      <DefaulHeader />
+      <Header />
       {/* <!--End Main Header --> */}
 
       <MobileMenu />

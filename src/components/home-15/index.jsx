@@ -9,9 +9,17 @@ import Testimonial6 from "../testimonial/Testimonial6";
 import Subscribe2 from "../call-to-action/subcribe-box/Subscribe2";
 import AppSection4 from "../app-section/AppSection4";
 import Footer from "./Footer";
+import Hero6 from "../hero/hero-6";
+
 import LoginPopup from "../common/form/login/LoginPopup";
 import MobileMenu from "../header/MobileMenu";
 import { Link } from "react-router-dom";
+import About3 from "../about/About3";
+import About5 from "../about/About5";
+import Blog5 from "../blog/Blog5";
+import Candidates from "../candidates/Candidates";
+import CallToAction11 from "../call-to-action/CallToAction11";
+import CallToAction from "../call-to-action/CallToAction";
 
 const index = () => {
   return (
@@ -25,7 +33,7 @@ const index = () => {
       <MobileMenu />
       {/* End MobileMenu */}
 
-      <Hero15 />
+      <Hero6 />
       {/* End Hero Section */}
 
       <section className="layout-pt-60 layout-pb-60">
@@ -50,23 +58,13 @@ const index = () => {
       </section>
       {/* <!-- End Work Section --> */}
 
-      <section className="layout-pt-60 layout-pb-120">
+      <section className="about-section-two style-two">
         <div className="auto-container">
-          <div className="sec-title text-center mb-0">
-            <h2>Jobs of the day</h2>
-            <div className="text">
-              Know your worth and find the job that qualify your life
-            </div>
+          <div className="row">
+            <About3 />
           </div>
-          {/* End sec-title */}
-          <JobFeatured10 />
         </div>
       </section>
-      {/* End Job Featured Section */}
-
-      <CallToAction9 />
-      {/* <!-- End Call To Action --> */}
-
       <section className="layout-pt-120 layout-pb-60">
         <div className="auto-container">
           <div className="row justify-content-between align-items-end">
@@ -102,31 +100,35 @@ const index = () => {
           </div>
         </div>
       </section>
+      <About5 />
+      <section className="layout-pt-120 layout-pb-120 section-bg-color">
+        <div className="section-bg-color__item -full -very-light-blue"></div>
+
+        <div className="auto-container">
+          <div className="sec-title text-center">
+            <h2>Featured Candidates</h2>
+            <div className="text">
+              Lorem ipsum dolor sit amet elit, sed do eiusmod tempor
+            </div>
+          </div>
+          {/* End sec-title */}
+
+          <div className="carousel-outer" data-aos="fade-up">
+            <div className="candidates-carousel default-dots">
+              <Candidates />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* End Job Featured Section */}
+
+      <CallToAction9 />
+      {/* <!-- End Call To Action --> */}
+
+    
       {/* <!-- End Top Companies --> */}
 
-      <section className="layout-pt-60 layout-pb-60">
-        <div className="auto-container">
-          <div className="sec-title-outer">
-            <div className="sec-title">
-              <h2>Featured Cities</h2>
-              <div className="text">
-                Lorem ipsum dolor sit amet elit, sed do eiusmod tempor
-              </div>
-            </div>
-            {/* End sec-title */}
-            <Link to="/job-list-v13" className="link text-green">
-              Browse All Locations <span className="fa fa-angle-right"></span>
-            </Link>
-          </div>
-          {/* End .sec-title-outer */}
 
-          <div className="row" data-aos="fade-up">
-            <FeaturedBlock3 />
-          </div>
-          {/* End .row */}
-        </div>
-        {/* End auto-container */}
-      </section>
       {/* <!-- End Features Section --> */}
 
       <section className="layout-pt-60 layout-pb-120">
@@ -151,11 +153,32 @@ const index = () => {
       </section>
       {/* <!-- End Testimonials Section --> */}
 
-      <Subscribe2 />
       {/* <!-- End Subscribe Section --> */}
 
-      <AppSection4 />
-      {/* <!-- End App Section --> */}
+      <section className="layout-pt-60 layout-pb-120 border-bottom-none">
+        <div className="auto-container">
+          <div className="row grid-base justify-content-between align-items-end">
+            <div className="col-lg-6">
+              <div className="sec-title mb-0">
+                <h2>Latest News</h2>
+                <div className="text">Lorem ipsum dolor sit amet elit</div>
+              </div>
+            </div>
+            {/* End  .col*/}
+            <div className="col-auto">
+              <Link to="/blog-list-v1" className="button -arrow">
+                Browse
+                <span className="fa fa-angle-right"></span>
+              </Link>
+            </div>
+          </div>
+          {/* End .row */}
+
+          <div className="row grid-base pt-50" data-aos="fade-up">
+            <Blog5 />
+          </div>
+        </div>
+      </section>
 
       <Footer />
       {/* <!-- End Main Footer --> */}

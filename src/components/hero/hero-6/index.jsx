@@ -1,8 +1,14 @@
 import SearchForm from "../../common/job-search/SearchForm";
 import ImageBox from "./ImageBox";
 import PopularSearch from "../PopularSearch";
+import { Link } from "react-router-dom";
 
+import { useNavigate } from "react-router-dom";
 const index = () => {
+  const navigate = useNavigate();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
   return (
     <section className="banner-section-six">
       <div className="auto-container">
@@ -15,17 +21,67 @@ const index = () => {
             >
               <div className="title-box">
                 <h3>
-                  Find a Perfect <br />
-                  Candidate
+                Identify the ideal candidate swiftly. <br />
+                  
                 </h3>
                 <div className="text">
-                  Find Jobs, Employment & Career Opportunities
+                Streamline Hiring: Find Your Perfect Fit Fast!
                 </div>
               </div>
 
               {/* <!-- Job Search Form --> */}
-              <div className="job-search-form">
-                <SearchForm />
+              <div
+                className="job-search-form"
+                data-aos-delay="700"
+                data-aos="fade-up"
+              >
+                <form onClick={handleSubmit}>
+  <div className="row">
+    <h2>Employer Login/Sign Up</h2>
+
+    {/* <!-- Form Group --> */}
+    <div className="form-group col-lg-12 col-md-12 col-sm-12">
+      <span className="icon flaticon-user"></span>
+      <input
+        type="text"
+        name="username"
+        placeholder="Username"
+      />
+    </div>
+
+    {/* <!-- Form Group --> */}
+    <div className="form-group col-lg-12 col-md-12 col-sm-12">
+      <span className="icon flaticon-lock"></span>
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+      />
+    </div>
+
+    {/* <!-- Form Group --> */}
+    <div className="form-group col-lg-12 col-md-12 col-sm-12">
+      <span className="icon flaticon-phone"></span>
+      <input
+        type="tel"
+        name="mobile_number"
+        placeholder="Enter your mobile number"
+      />
+    </div>
+
+    {/* <!-- Form Group --> */}
+    <div className="form-group col-lg-12 col-md-12 col-sm-12 text-center">
+      <button
+        type="submit"
+        className="theme-btn btn-style-one"
+        onClick={() => navigate("/employers-dashboard/dashboard")}
+      >
+        Login
+      </button>
+    </div>
+  </div>
+</form>
+
               </div>
               {/* <!-- Job Search Form --> */}
 
