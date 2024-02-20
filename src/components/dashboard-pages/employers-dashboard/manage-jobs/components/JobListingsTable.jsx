@@ -1,8 +1,32 @@
 import { Link } from "react-router-dom";
-import jobs from "../../../../../data/job-featured.js";
+// import jobs from "../../../../../data/job-featured.js";
+import React, { useState, useEffect } from 'react';
+
+
+
 
 
 const JobListingsTable = () => {
+
+  const [jobs, setJobs] = useState([]);
+  const [selectedTimeRange, setSelectedTimeRange] = useState('Last 6 Months');
+
+  useEffect(() => {
+    // Fetch jobs data from the API
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:8080/api/jobPost/getAllPosts');
+        const data = await response.json();
+        setJobs(data.allJobsData);
+      } catch (error) {
+        console.error('Error fetching jobs:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
   return (
     <div className="tabs-box">
       <div className="widget-title">
@@ -36,7 +60,18 @@ const JobListingsTable = () => {
             </thead>
 
             <tbody>
-              {jobs.slice(0, 4).map((item) => (
+              {jobs
+          .filter((job) => {
+            // Add logic to filter jobs based on the selected time range
+            // You can use a library like date-fns for date manipulation
+            // For simplicity, assuming the 'deadline' property is a valid Date
+            const jobDeadline = new Date(job.deadline);
+            const sixMonthsAgo = new Date();
+            sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+
+            return jobDeadline > sixMonthsAgo;
+          })
+          .map((item) => (
                 <tr key={item.id}>
                   <td>
                     {/* <!-- Job Block --> */}
